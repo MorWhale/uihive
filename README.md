@@ -45,9 +45,14 @@ uihive add button      # copy the component into your project
 - [ ] Public registry site / search
 - [ ] Vue & Svelte support
 
+## 📚 Documentation
+
+- [Architecture](ARCHITECTURE.md) — publish flow, registry manifest format and mDNS discovery.
+- [Contributing](CONTRIBUTING.md) — tech stack, local setup and quality checks.
+
 ## 🤝 Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) (coming soon).
+Issues and pull requests are welcome. Check [CONTRIBUTING.md](CONTRIBUTING.md) first.
 
 ## 👥 Credits
 
