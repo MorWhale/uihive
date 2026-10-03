@@ -1,5 +1,5 @@
 {
-  "name": "uihive",
+  "name": "@morwhale/uihive",
   "version": "0.0.1",
   "description": "Open-source UI component registry compatible with shadcn/ui — public and private, P2P via mDNS.",
   "license": "MIT",
