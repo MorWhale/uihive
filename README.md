@@ -49,6 +49,10 @@ uihive add button      # copy the component into your project
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) (coming soon).
 
+## 👥 Credits
+
+- [@hdmed](https://github.com/hdmed) — project owner
+
 ## 📄 License
 
 [MIT](LICENSE)
