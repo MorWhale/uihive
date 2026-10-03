@@ -38,6 +38,23 @@ npx tsx src/index.ts publish src/components/ui/button.tsx
 uihive add button      # copy the component into your project
 ```
 
+## 🗂️ Project layout
+
+| Path | Role |
+|---|---|
+| `src/index.ts` | CLI entry point (Commander): registers commands and parses arguments. |
+| `src/commands/` | `init`, `discover`, `add`, `publish` implementations. |
+| `src/core/` | AST parsing (`@swc/core`) and `registry.json` manifest handling. |
+| `src/network/` | mDNS discovery (`bonjour-service`): advertise `_uihive._tcp` on port `4090`. |
+| `src/utils/` | Small shared helpers (file I/O, paths). |
+| `Docs/` | Personal working notes — gitignored, not published. |
+| `ARCHITECTURE.md` | Design overview: publish flow, registry format, mDNS discovery. |
+| `CONTRIBUTING.md` | Dev setup, project layout and quality checks. |
+
+## 🏷️ Versioning & tags
+
+Releases are tagged `vX.Y.Z` matching `package.json` version, e.g. `v0.0.1`.
+
 ## 🗺️ Roadmap
 
 - [x] `init`, `discover`, `add`, `publish` scaffold
