@@ -14,7 +14,7 @@
 
 > uihive lets teams import, share and publish UI components (React/Tailwind/Radix) without a central npm registry. It's compatible with the shadcn registry format, works public or private over mDNS, and ships as a small CLI.
 >
-> `npm install -g @morwhale/uihive` then `uihive init` to get started.
+> `npm install -g uihive` then `uihive init` to get started.
 >
 > Repo: https://github.com/MorWhale/uihive
 
@@ -27,7 +27,7 @@
 > Quick start:
 >
 > ```bash
-> npm install -g @morwhale/uihive
+> npm install -g uihive
 > uihive init
 > uihive publish src/components/ui/button.tsx
 > uihive add button
@@ -37,9 +37,9 @@
 
 ## X / Twitter
 
-> 📦 Introducing @morwhale/uihive — a shadcn-compatible UI component registry for teams.
+> 📦 Introducing uihive — a shadcn-compatible UI component registry for teams.
 > Share React/Tailwind/Radix components locally over mDNS, no central server.
-> `npm install -g @morwhale/uihive`
+> `npm install -g uihive`
 > https://github.com/MorWhale/uihive
 
 ## Where to post / submit
