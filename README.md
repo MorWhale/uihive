@@ -52,6 +52,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) (coming soon).
 ## 👥 Credits
 
 - [@hdmed](https://github.com/hdmed) — project owner
+- [@GiftsWarez](https://github.com/GiftsWarez) — automation bot
 
 ## 📄 License
 
