@@ -1,11 +1,11 @@
 import { writeFileSync, existsSync, mkdirSync } from "node:fs";
-import { dirname } from "node:path";
+import { t } from "../i18n.js";
 
 export const CONFIG = "uihive.json";
 
 export async function init() {
   if (existsSync(CONFIG)) {
-    console.log(`${CONFIG} already exists.`);
+    console.log(t("configExists"));
     return;
   }
   mkdirSync(".uihive", { recursive: true });
@@ -18,5 +18,5 @@ export async function init() {
   if (!existsSync(".uihive/registry.json")) {
     writeFileSync(".uihive/registry.json", JSON.stringify({ $schema: "https://uihive.dev/schema.json", name: "my-team-ui", version: "1.0.0", components: [] }, null, 2));
   }
-  console.log("Created uihive.json and .uihive/registry.json");
+  console.log(t("created"));
 }

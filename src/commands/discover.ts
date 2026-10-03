@@ -1,10 +1,9 @@
 import Bonjour from "bonjour-service";
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
+import { t } from "../i18n.js";
 
 export async function discover() {
   const bonjour = new Bonjour();
-  console.log("Scanning for _uihive._tcp...");
+  console.log(t("scanning"));
   bonjour.find({ type: "uihive" }, (service) => {
     console.log(`${service.name} — ${service.host}:${service.port}`);
   });

@@ -25,6 +25,10 @@ npm install -g uihive
 npx uihive@latest init
 ```
 
+## 🌍 Language
+
+Set `UIHIVE_LANG=fr` (or a `fr_*` `LANG`) to run the CLI in French; defaults to English.
+
 ## 🛠️ Commands
 
 | Command | Description |
