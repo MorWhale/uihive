@@ -20,6 +20,7 @@ uihive/
 │   ├── network/         # mDNS module and temporary P2P server
 │   ├── utils/           # File handling, paths, terminal formatting
 │   └── index.ts         # CLI entry point
+├── tests/               # Vitest suites
 ├── README.md
 ├── ARCHITECTURE.md
 └── CONTRIBUTING.md

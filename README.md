@@ -1,5 +1,7 @@
 # uihive 🐝
 
+![CI](https://github.com/MorWhale/uihive/actions/workflows/ci.yml/badge.svg)
+
 **uihive** is an **open-source UI component registry** compatible with the [shadcn/ui](https://ui.shadcn.com) registry format. Use it as a **public registry** (community / open source) or as a **private team registry** — no central server required.
 
 - **Public registry**: discover, install and share React / Tailwind / Radix components via `npx uihive`.
