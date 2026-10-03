@@ -1,5 +1,7 @@
 # Contributing to uihive
 
+> 🇫🇷 [Français](CONTRIBUTING.fr.md)
+
 This document describes the conventions and project structure for contributing to the uihive CLI.
 
 ## 🛠️ Tech stack

@@ -1,5 +1,7 @@
 # Architecture
 
+> 🇫🇷 [Français](ARCHITECTURE.fr.md)
+
 ## 1. Publish flow (`uihive publish <path>`)
 
 ```
