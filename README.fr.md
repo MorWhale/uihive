@@ -31,12 +31,20 @@ Définissez `UIHIVE_LANG=fr` (ou une variable `LANG=fr_*`) pour exécuter la CLI
 
 ## 🛠️ Commandes
 
-| Commande | Description |
-|---|---|
-| `uihive init` | Crée `uihive.json` et le registry local dans le projet cible. |
-| `uihive discover` | Scanne le réseau local pour trouver les registries actifs. |
-| `uihive add <component>` | Copie le composant partagé + ses dépendances dans le projet local. |
-| `uihive publish <file>` | Extrait et publie un composant local vers le registry. |
+| Commande                                          | Description                                                                                                |
+| ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `uihive init`                                     | Crée `uihive.json` et le registry local dans le projet cible.                                              |
+| `uihive discover`                                 | Scanne le réseau local pour trouver les registries actifs.                                                 |
+| `uihive add <component>`                          | Copie le composant partagé + ses dépendances dans le projet local. `--dry-run` affiche ce qui serait fait. |
+| `uihive publish <file>`                           | Extrait et publie un composant local vers le registry. `--dry-run` affiche ce qui serait publié.           |
+| `uihive list`                                     | Liste les composants du registry.                                                                          |
+| `uihive info <component>`                         | Affiche les détails d'un composant.                                                                        |
+| `uihive serve`                                    | Annonce le registry local via mDNS.                                                                        |
+| `uihive remove <component>`                       | Supprime un composant du registry. `--dry-run` affiche ce qui serait supprimé.                             |
+| `uihive search <query>`                           | Recherche par nom ou dépendance.                                                                           |
+| global `--lang <en\|fr>`                          | Force la langue de la CLI.                                                                                 |
+| global `--registry <path>`                        | Remplace le chemin vers `registry.json`.                                                                   |
+| `uihive init --template <minimal\|team\|private>` | Choix d'un preset pour `name`/layout du registry.                                                          |
 
 ## 📖 Exemple
 
@@ -48,16 +56,16 @@ uihive add button      # copie le composant dans votre projet
 
 ## 🗂️ Structure du projet
 
-| Chemin | Rôle |
-|---|---|
-| `src/index.ts` | Point d'entrée CLI (Commander) : enregistre les commandes et parse les arguments. |
-| `src/commands/` | Implémentations `init`, `discover`, `add`, `publish`. |
-| `src/core/` | Parsing AST (`@swc/core`) et gestion du manifest `registry.json`. |
-| `src/network/` | Découverte mDNS (`bonjour-service`) : annonce `_uihive._tcp` sur le port `4090`. |
-| `src/utils/` | Helpers partagés (I/O fichiers, chemins). |
-| `Docs/` | Notes personnelles — gitignored, non publiées. |
-| `ARCHITECTURE.md` | Vue d'ensemble : flux de publication, format registry, découverte mDNS. |
-| `CONTRIBUTING.md` | Setup dev, structure du projet et tests qualité. |
+| Chemin            | Rôle                                                                              |
+| ----------------- | --------------------------------------------------------------------------------- |
+| `src/index.ts`    | Point d'entrée CLI (Commander) : enregistre les commandes et parse les arguments. |
+| `src/commands/`   | Implémentations `init`, `discover`, `add`, `publish`.                             |
+| `src/core/`       | Parsing AST (`@swc/core`) et gestion du manifest `registry.json`.                 |
+| `src/network/`    | Découverte mDNS (`bonjour-service`) : annonce `_uihive._tcp` sur le port `4090`.  |
+| `src/utils/`      | Helpers partagés (I/O fichiers, chemins).                                         |
+| `Docs/`           | Notes personnelles — gitignored, non publiées.                                    |
+| `ARCHITECTURE.md` | Vue d'ensemble : flux de publication, format registry, découverte mDNS.           |
+| `CONTRIBUTING.md` | Setup dev, structure du projet et tests qualité.                                  |
 
 ## 🏷️ Versioning & tags
 

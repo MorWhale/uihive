@@ -17,7 +17,7 @@ This document describes the conventions and project structure for contributing t
 ```text
 uihive/
 ├── src/
-│   ├── commands/        # Command logic (init, add, publish, discover)
+│   ├── commands/        # Command logic (init, discover, add, publish, list, info, serve, remove, search)
 │   ├── core/            # AST engine, import parsing, manifest handling
 │   ├── network/         # mDNS module and temporary P2P server
 │   ├── utils/           # File handling, paths, terminal formatting
@@ -44,6 +44,9 @@ uihive --help
 Before opening a PR, make sure the checks pass:
 
 ```bash
+npm run lint
+npm run format:check
 npm run typecheck
-npm run test
+npm run test:coverage
+npm run build
 ```

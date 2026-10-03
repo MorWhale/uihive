@@ -7,5 +7,8 @@ export async function discover() {
   bonjour.find({ type: "uihive" }, (service) => {
     console.log(`${service.name} — ${service.host}:${service.port}`);
   });
-  setTimeout(() => { bonjour.destroy(); process.exit(0); }, 5000);
+  setTimeout(() => {
+    bonjour.destroy();
+    process.exit(0);
+  }, 5000);
 }

@@ -3,10 +3,22 @@
   "version": "0.0.1",
   "description": "Open-source UI component registry compatible with shadcn/ui — public and private, P2P via mDNS.",
   "license": "MIT",
-  "keywords": ["ui", "components", "registry", "shadcn", "tailwind", "radix", "p2p", "mDNS"],
-  "repository": { "type": "git", "url": "git+https://github.com/hdmed/uihive.git" },
-  "homepage": "https://github.com/hdmed/uihive#readme",
-  "bugs": "https://github.com/hdmed/uihive/issues",
+  "keywords": [
+    "ui",
+    "components",
+    "registry",
+    "shadcn",
+    "tailwind",
+    "radix",
+    "p2p",
+    "mDNS"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MorWhale/uihive.git"
+  },
+  "homepage": "https://github.com/MorWhale/uihive#readme",
+  "bugs": "https://github.com/MorWhale/uihive/issues",
   "type": "module",
   "bin": {
     "uihive": "./dist/index.js"
@@ -21,6 +33,10 @@
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "prepublishOnly": "npm run build"
   },
   "publishConfig": {
@@ -39,6 +55,12 @@
     "typescript": "^5.6.0",
     "tsx": "^4.19.0",
     "vitest": "^2.1.0",
-    "@types/node": "^20.0.0"
+    "@types/node": "^20.0.0",
+    "eslint": "^9.0.0",
+    "@eslint/js": "^9.0.0",
+    "typescript-eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.0",
+    "@vitest/coverage-v8": "^2.1.0"
   }
 }

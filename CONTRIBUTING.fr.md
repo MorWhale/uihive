@@ -17,7 +17,7 @@ Ce document décrit les conventions de développement et la structure du projet 
 ```text
 uihive/
 ├── src/
-│   ├── commands/        # Logique des commandes (init, add, publish, discover)
+│   ├── commands/        # Logique des commandes (init, discover, add, publish, list, info, serve, remove, search)
 │   ├── core/            # Moteur AST, parsing d'imports et gestion du manifest
 │   ├── network/         # Module mDNS et serveur P2P temporaire
 │   ├── utils/           # Gestion des fichiers, chemins, formatage terminal
@@ -44,6 +44,9 @@ uihive --help
 Avant toute Pull Request, s'assurer que les vérifications passent :
 
 ```bash
+npm run lint
+npm run format:check
 npm run typecheck
-npm run test
+npm run test:coverage
+npm run build
 ```

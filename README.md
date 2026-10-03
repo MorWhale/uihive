@@ -31,12 +31,20 @@ Set `UIHIVE_LANG=fr` (or a `fr_*` `LANG`) to run the CLI in French; defaults to 
 
 ## 🛠️ Commands
 
-| Command | Description |
-|---|---|
-| `uihive init` | Create `uihive.json` and the local registry in the target project. |
-| `uihive discover` | Scan the local network for active registries. |
-| `uihive add <component>` | Copy a shared component + its dependencies into the local project. |
-| `uihive publish <file>` | Extract and publish a local component to the registry. |
+| Command                                           | Description                                                                                              |
+| ------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `uihive init`                                     | Create `uihive.json` and the local registry in the target project.                                       |
+| `uihive discover`                                 | Scan the local network for active registries.                                                            |
+| `uihive add <component>`                          | Copy a shared component + its dependencies into the local project. `--dry-run` prints what would happen. |
+| `uihive publish <file>`                           | Extract and publish a local component to the registry. `--dry-run` prints what would be published.       |
+| `uihive list`                                     | List components in the registry.                                                                         |
+| `uihive info <component>`                         | Show details about a component.                                                                          |
+| `uihive serve`                                    | Advertise the local registry via mDNS.                                                                   |
+| `uihive remove <component>`                       | Remove a component from the registry. `--dry-run` prints what would be removed.                          |
+| `uihive search <query>`                           | Search components by name or dependency.                                                                 |
+| global `--lang <en\|fr>`                          | Override UI language.                                                                                    |
+| global `--registry <path>`                        | Override the `registry.json` path.                                                                       |
+| `uihive init --template <minimal\|team\|private>` | Choose a preset for `name`/registry layout.                                                              |
 
 ## 📖 Example
 
@@ -48,16 +56,16 @@ uihive add button      # copy the component into your project
 
 ## 🗂️ Project layout
 
-| Path | Role |
-|---|---|
-| `src/index.ts` | CLI entry point (Commander): registers commands and parses arguments. |
-| `src/commands/` | `init`, `discover`, `add`, `publish` implementations. |
-| `src/core/` | AST parsing (`@swc/core`) and `registry.json` manifest handling. |
-| `src/network/` | mDNS discovery (`bonjour-service`): advertise `_uihive._tcp` on port `4090`. |
-| `src/utils/` | Small shared helpers (file I/O, paths). |
-| `Docs/` | Personal working notes — gitignored, not published. |
-| `ARCHITECTURE.md` | Design overview: publish flow, registry format, mDNS discovery. |
-| `CONTRIBUTING.md` | Dev setup, project layout and quality checks. |
+| Path              | Role                                                                         |
+| ----------------- | ---------------------------------------------------------------------------- |
+| `src/index.ts`    | CLI entry point (Commander): registers commands and parses arguments.        |
+| `src/commands/`   | `init`, `discover`, `add`, `publish` implementations.                        |
+| `src/core/`       | AST parsing (`@swc/core`) and `registry.json` manifest handling.             |
+| `src/network/`    | mDNS discovery (`bonjour-service`): advertise `_uihive._tcp` on port `4090`. |
+| `src/utils/`      | Small shared helpers (file I/O, paths).                                      |
+| `Docs/`           | Personal working notes — gitignored, not published.                          |
+| `ARCHITECTURE.md` | Design overview: publish flow, registry format, mDNS discovery.              |
+| `CONTRIBUTING.md` | Dev setup, project layout and quality checks.                                |
 
 ## 🏷️ Versioning & tags
 
